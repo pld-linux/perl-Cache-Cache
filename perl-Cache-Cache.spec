@@ -50,7 +50,7 @@ plików lub pamiêci dzielonej.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-perl -MExtUtils::MakeMaker -wle 'WriteMakefile(NAME=>"Cache::Cache")'
+%{__perl} -MExtUtils::MakeMaker -wle 'WriteMakefile(NAME=>"Cache::Cache")'
 %{__make}
 
 %{!?_without_tests:%{__make} test}

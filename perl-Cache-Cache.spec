@@ -9,7 +9,7 @@ Summary:	Cache::Cache perl extension
 Summary(pl):	Rozszerzenie perla: Cache::Cache
 Name:		perl-Cache-Cache
 Version:	1.01
-Release:	4
+Release:	5
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -22,7 +22,7 @@ BuildRequires:	perl(File::Spec) >= 0.82
 BuildRequires:	perl-IPC-ShareLite >= 0.08
 BuildRequires:	perl-Storable >= 1.014
 %endif
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -50,7 +50,8 @@ plików lub pamiêci dzielonej.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-%{__perl} -MExtUtils::MakeMaker -wle 'WriteMakefile(NAME=>"Cache::Cache")'
+%{__perl} -MExtUtils::MakeMaker -wle 'WriteMakefile(NAME=>"Cache::Cache")' \
+	INSTALLDIRS=vendor
 %{__make}
 
 %{!?_without_tests:%{__make} test}
@@ -66,5 +67,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc CHANGES COPYING CREDITS DISCLAIMER README STYLE
-%{perl_sitelib}/Cache/*.pm
+%{perl_vendorlib}/Cache/*.pm
 %{_mandir}/man3/*

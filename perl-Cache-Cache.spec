@@ -9,17 +9,19 @@ Summary:	Cache::Cache perl extension
 Summary(pl):	Rozszerzenie perla: Cache::Cache
 Name:		perl-Cache-Cache
 Version:	1.01
-Release:	3
+Release:	4
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+URL:		http://perl-cache.sourceforge.net/
 BuildRequires:	perl >= 5.6.1
-BuildRequires:	perl(File::Spec) >= 0.82
+%if %{?_without_tests:0}%{!?_without_tests:1}
 BuildRequires:	perl-Digest-SHA1 >= 2.01
 BuildRequires:	perl-Error >= 0.15
+BuildRequires:	perl(File::Spec) >= 0.82
 BuildRequires:	perl-IPC-ShareLite >= 0.08
 BuildRequires:	perl-Storable >= 1.014
-BuildRequires:	perl-modules
+%endif
 BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -48,8 +50,9 @@ plików lub pamiêci dzielonej.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-perl Makefile.PL
+perl -MExtUtils::MakeMaker -wle 'WriteMakefile(NAME=>"Cache::Cache")'
 %{__make}
+
 %{!?_without_tests:%{__make} test}
 
 %install
@@ -62,6 +65,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc CHANGES COPYING CREDITS DISCLAIMER README STYLE TODO
+%doc CHANGES COPYING CREDITS DISCLAIMER README STYLE
 %{perl_sitelib}/Cache/*.pm
 %{_mandir}/man3/*

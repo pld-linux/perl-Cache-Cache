@@ -5,12 +5,12 @@
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Cache
 %define		pnam	Cache
-Summary:	Cache::Cache perl extension
-Summary(pl):	Rozszerzenie perla: Cache::Cache
+Summary:	Cache::Cache - a generic interface for creating persistent data stores
+Summary(pl):	Cache::Cache - ogólny interfejs do trwa³ego przechowywania danych
 Name:		perl-Cache-Cache
 Version:	1.02
 Release:	1
-License:	GPL/Artistic
+License:	GPL or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	9dfff47f2317a59a15546a972b2a67ba

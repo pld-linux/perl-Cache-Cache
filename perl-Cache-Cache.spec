@@ -1,8 +1,8 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Cache
 %define	pnam	Cache
-Summary:	Cache-Cache perl extension
-Summary(pl):	Rozszerzenie perla: Cache-Cache
+Summary:	Cache::Cache perl extension
+Summary(pl):	Rozszerzenie perla: Cache::Cache
 Name:		perl-Cache-Cache
 Version:	0.99
 Release:	1

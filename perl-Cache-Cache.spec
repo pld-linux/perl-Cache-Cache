@@ -1,6 +1,6 @@
 #
 # Conditional build:
-# _without_tests - do not perform "make test"
+%bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Cache
@@ -16,7 +16,7 @@ Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version
 # Source0-md5:	9dfff47f2317a59a15546a972b2a67ba
 URL:		http://perl-cache.sourceforge.net/
 BuildRequires:	perl-devel >= 5.6.1
-%if %{?_without_tests:0}%{!?_without_tests:1}
+%if %{with tests}
 BuildRequires:	perl-Digest-SHA1 >= 2.01
 BuildRequires:	perl-Error >= 0.15
 BuildRequires:	perl(File::Spec) >= 0.82
@@ -55,7 +55,7 @@ plików lub pamiêci dzielonej.
 	INSTALLDIRS=vendor
 %{__make}
 
-%{!?_without_tests:%{__make} test}
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT

@@ -5,17 +5,19 @@ Summary:	Cache::Cache perl extension
 Summary(pl):	Rozszerzenie perla: Cache::Cache
 Name:		perl-Cache-Cache
 Version:	1.01
-Release:	1
+Release:	2
 License:	GPL or Artistic
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 BuildRequires:	perl >= 5.6.1
-BuildRequires:	perl-Digest-MD5
-BuildRequires:	perl-Error
-BuildRequires:	perl-IPC-ShareLite
-BuildRequires:	perl-Storable
+BuildRequires:	perl(File::Spec) >= 0.82
+BuildRequires:	perl-Digest-SHA1 >= 2.01
+BuildRequires:	perl-Error >= 0.15
+BuildRequires:	perl-IPC-ShareLite >= 0.08
+BuildRequires:	perl-Storable >= 1.014
 BuildRequires:	perl-modules
 BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description

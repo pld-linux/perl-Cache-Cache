@@ -13,6 +13,7 @@ Release:	5
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	7f0c7f9132c72bdba9dd9a76041358df
 URL:		http://perl-cache.sourceforge.net/
 BuildRequires:	perl-devel >= 5.6.1
 %if %{?_without_tests:0}%{!?_without_tests:1}

@@ -15,7 +15,7 @@ Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	9dfff47f2317a59a15546a972b2a67ba
 URL:		http://perl-cache.sourceforge.net/
-BuildRequires:	perl-devel >= 5.6.1
+BuildRequires:	perl-devel >= 1:5.8.0
 %if %{with tests}
 BuildRequires:	perl-Digest-SHA1 >= 2.01
 BuildRequires:	perl-Error >= 0.15

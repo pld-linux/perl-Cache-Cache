@@ -9,7 +9,7 @@ Summary:	Cache::Cache - a generic interface for creating persistent data stores
 Summary(pl):	Cache::Cache - ogólny interfejs do trwa³ego przechowywania danych
 Name:		perl-Cache-Cache
 Version:	1.02
-Release:	1
+Release:	2
 License:	GPL or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz

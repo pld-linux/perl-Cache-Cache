@@ -6,7 +6,7 @@ Summary(pl):	Rozszerzenie perla: Cache::Cache
 Name:		perl-Cache-Cache
 Version:	1.01
 Release:	2
-License:	GPL or Artistic
+License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 BuildRequires:	perl >= 5.6.1

@@ -9,13 +9,13 @@ Release:	1
 License:	GPL or Artistic
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRequires:	perl >= 5.6.1
 BuildRequires:	perl-Digest-MD5
 BuildRequires:	perl-Error
-BuildRequires:	perl-modules
 BuildRequires:	perl-IPC-ShareLite
 BuildRequires:	perl-Storable
+BuildRequires:	perl-modules
+BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -50,13 +50,11 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-gzip -9nf CHANGES COPYING CREDITS DISCLAIMER README STYLE TODO
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc CHANGES COPYING CREDITS DISCLAIMER README STYLE TODO
 %{perl_sitelib}/Cache
 %{_mandir}/man3/*

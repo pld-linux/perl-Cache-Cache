@@ -4,7 +4,7 @@
 Summary:	Cache::Cache perl extension
 Summary(pl):	Rozszerzenie perla: Cache::Cache
 Name:		perl-Cache-Cache
-Version:	0.99
+Version:	1.01
 Release:	1
 License:	GPL or Artistic
 Group:		Development/Languages/Perl

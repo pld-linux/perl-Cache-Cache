@@ -9,7 +9,7 @@ Summary:	Cache::Cache - a generic interface for creating persistent data stores
 Summary(pl):	Cache::Cache - ogólny interfejs do trwa³ego przechowywania danych
 Name:		perl-Cache-Cache
 Version:	1.02
-Release:	2
+Release:	3
 License:	GPL or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -21,7 +21,6 @@ BuildRequires:	perl-Digest-SHA1 >= 2.01
 BuildRequires:	perl-Error >= 0.15
 BuildRequires:	perl(File::Spec) >= 0.82
 BuildRequires:	perl-IPC-ShareLite >= 0.08
-BuildRequires:	perl-Storable >= 1.014
 %endif
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch

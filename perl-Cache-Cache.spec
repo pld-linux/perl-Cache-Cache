@@ -3,8 +3,8 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define		pdir	Cache
-%define		pnam	Cache
+%define	pdir	Cache
+%define	pnam	Cache
 Summary:	Cache::Cache - a generic interface for creating persistent data stores
 Summary(pl):	Cache::Cache - ogólny interfejs do trwa³ego przechowywania danych
 Name:		perl-Cache-Cache

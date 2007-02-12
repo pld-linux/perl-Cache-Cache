@@ -6,7 +6,7 @@
 %define		pdir	Cache
 %define		pnam	Cache
 Summary:	Cache::Cache - a generic interface for creating persistent data stores
-Summary(pl):	Cache::Cache - ogólny interfejs do trwa³ego przechowywania danych
+Summary(pl.UTF-8):   Cache::Cache - ogÃ³lny interfejs do trwaÅ‚ego przechowywania danych
 Name:		perl-Cache-Cache
 Version:	1.05
 Release:	1
@@ -36,15 +36,15 @@ interface in sharing data between runs of an application or
 invocations of a CGI-style script or simply as an easy to use
 abstraction of the filesystem or shared memory.
 
-%description -l pl
-Modu³y Cache maj± na celu pomóc programi¶cie w utrzymywaniu danych
-przez okre¶lony czas. Te modu³y s± przewa¿nie u¿ywane w aplikacjach
-WWW do zapisywania danych lokalnie w celu unikniêcia powtarzaj±cych
-siê i niepotrzebnych odwo³añ do zewnêtrznych maszyn lub baz danych.
-Cache::Cache bywa u¿ywany ze wzglêdu na swój prosty interfejs do
-dzielenia danych pomiêdzy uruchomieniami aplikacji lub wywo³aniami
-skryptu CGI, albo po prostu jako ³atwa w u¿yciu abstrakcja systemu
-plików lub pamiêci dzielonej.
+%description -l pl.UTF-8
+ModuÅ‚y Cache majÄ… na celu pomÃ³c programiÅ›cie w utrzymywaniu danych
+przez okreÅ›lony czas. Te moduÅ‚y sÄ… przewaÅ¼nie uÅ¼ywane w aplikacjach
+WWW do zapisywania danych lokalnie w celu unikniÄ™cia powtarzajÄ…cych
+siÄ™ i niepotrzebnych odwoÅ‚aÅ„ do zewnÄ™trznych maszyn lub baz danych.
+Cache::Cache bywa uÅ¼ywany ze wzglÄ™du na swÃ³j prosty interfejs do
+dzielenia danych pomiÄ™dzy uruchomieniami aplikacji lub wywoÅ‚aniami
+skryptu CGI, albo po prostu jako Å‚atwa w uÅ¼yciu abstrakcja systemu
+plikÃ³w lub pamiÄ™ci dzielonej.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}

@@ -6,7 +6,7 @@
 %define		pdir	Cache
 %define		pnam	Cache
 Summary:	Cache::Cache - a generic interface for creating persistent data stores
-Summary(pl.UTF-8):   Cache::Cache - ogólny interfejs do trwałego przechowywania danych
+Summary(pl.UTF-8):	Cache::Cache - ogólny interfejs do trwałego przechowywania danych
 Name:		perl-Cache-Cache
 Version:	1.05
 Release:	1

@@ -9,7 +9,7 @@ Summary:	Cache::Cache - a generic interface for creating persistent data stores
 Summary(pl.UTF-8):	Cache::Cache - ogólny interfejs do trwałego przechowywania danych
 Name:		perl-Cache-Cache
 Version:	1.05
-Release:	1
+Release:	2
 License:	GPL or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -20,11 +20,14 @@ BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	perl-Digest-SHA1 >= 2.01
 BuildRequires:	perl-Error >= 0.15
 BuildRequires:	perl(File::Spec) >= 0.82
-BuildRequires:	perl-IPC-ShareLite >= 0.08
+# optional, broken in 5.10.0
+#BuildRequires:	perl-IPC-ShareLite >= 0.08
 %endif
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+%define		_noautoreq	'perl(IPC::ShareLite)'
 
 %description
 The Cache modules are designed to assist a developer in persisting
@@ -50,7 +53,7 @@ plików lub pamięci dzielonej.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-%{__perl} -MExtUtils::MakeMaker -wle 'WriteMakefile(NAME=>"Cache::Cache")' \
+%{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
 %{__make}
 

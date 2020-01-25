@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
 #
-%include	/usr/lib/rpm/macros.perl
 %define		pdir	Cache
 %define		pnam	Cache
 Summary:	Cache::Cache - a generic interface for creating persistent data stores
